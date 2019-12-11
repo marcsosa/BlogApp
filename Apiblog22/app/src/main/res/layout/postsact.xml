@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="406dp"
+            android:layout_height="121dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.049"
+            app:srcCompat="@drawable/fondo4" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@id/imageView1"
+            android:background="#90000000"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/pvtitulo"
+            android:layout_width="143dp"
+            android:layout_height="30dp"
+            android:text="Titulo"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pvfecha"
+            app:layout_constraintHorizontal_bias="0.094"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
+            app:layout_constraintVertical_bias="0.822" />
+
+        <TextView
+            android:id="@+id/pvfecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="24dp"
+            android:text="10/12/2019"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/pvnombreusuario"
+            android:layout_width="133dp"
+            android:layout_height="23dp"
+            android:text="Nombre usuario"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pvfecha" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+        android:clipToPadding="false"
+        android:fillViewport="false"
+        android:scrollbarStyle="insideInset">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/pvcontenido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="4sp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            android:textColor="#020202"
+            android:textSize="14sp">
+
+        </TextView>
+    </ScrollView>
+    <TextView
+        android:layout_marginLeft="10dp"
+
+        android:textStyle="italic"
+        android:id="@+id/pvtags"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:text="Tags [Hola,literatura]"
+        android:textColor="@color/black_effective" />
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clipToPadding="false"
+        android:elevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/pvnumcomentario"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:text="Comentarios"
+            android:textColor="@color/black_effective" />
+
+        <TextView
+            android:id="@+id/pvlikes"
+            android:layout_width="10sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Likes"
+            android:textColor="@color/black_effective" />
+
+        <Button
+            android:id="@+id/buttonlike"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_thumb_up_black_24dp2"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="-100dp"
+            />
+
+        <TextView
+            android:id="@+id/pvVisitas"
+          android:paddingLeft="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Visitas"
+            android:textColor="@color/black_effective"
+            android:layout_width="10dp" />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclercomentarios"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:clipToPadding="false"
+        android:elevation="3dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="397dp"
+        android:layout_height="92dp"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="false">
+
+        <EditText
+            android:id="@+id/edbox"
+            android:layout_marginRight="10dp"
+            android:layout_width="387dp"
+            android:layout_height="match_parent"
+            android:background="#eff0f1"
+            android:gravity="top"
+            android:hint="Entra tu crearComentario..."
+            android:lines="5"
+            android:textColor="@color/black_effective"
+            android:textColorHint="@color/black_effective"
+            android:textSize="15dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btncomentar"
+
+        android:layout_width="316dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@color/btn"
+        android:text="comentar">
+
+    </Button>
+</LinearLayout>

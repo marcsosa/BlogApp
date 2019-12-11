@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="inicio_de_sesi_n">Inicio de sesión</string>
+    <string name="accede_a_tu_cuenta">Accede a tu cuenta</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="no_tienes_una_cuenta">No tienes una cuenta?</string>
+    <string name="todo">TODO</string>
+    <string name="Prueba" />
+    <string name="button">Button</string>
+    <string name="creado_por_marc">Creado por Marc</string>
+
+</resources>

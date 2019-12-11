@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="406dp"
+            android:layout_height="121dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/letter_background_writing_hand_paper_icons_classical_design_6837888" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@id/imageView1"
+            android:background="#90000000"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/postitulo"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="CREA UN NUEVO POST"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pvfecha"
+            app:layout_constraintHorizontal_bias="0.094"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
+            app:layout_constraintVertical_bias="0.827" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="346dp"
+        android:layout_height="346dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btnredondodorado"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pvtags8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titulo del POST"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+
+            android:id="@+id/postededittitulo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/blancoredondo"
+            android:hint="Titulo"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black_effective"
+            android:textColorHint="@color/black_effective"
+            android:textSize="14sp"
+
+            />
+
+
+        <EditText
+            android:id="@+id/postedbox"
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/blancoredondo"
+            android:gravity="top"
+            android:hint="Escribe tu publicacion"
+            android:lines="5"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black_effective"
+            android:textColorHint="@color/black_effective"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/postedtag"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/blancoredondo"
+            android:drawableStart="@drawable/ic_turned_in_black_24dp"
+            android:hint="Tags: Separados por Coma"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black_effective"
+            android:textColorHint="@color/black_effective"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:elevation="10dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:contentPadding="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnpost"
+                android:layout_width="344dp"
+                android:layout_height="wrap_content"
+                android:background="@color/btn"
+                android:text="Enviar">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnback"
+                android:layout_width="344dp"
+                android:layout_height="wrap_content"
+                android:background="@color/btn"
+                android:text="Cancelar">
+
+            </Button>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
